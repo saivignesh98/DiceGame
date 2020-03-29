@@ -20,18 +20,21 @@ var player2={
 function initGame(){
     player1.name=prompt("Enter Player 1's name");
     player2.name=prompt("Enter Player 2's name");
-    document.getElementById("name-1").innerHTML=player1.name;
-    document.getElementById("name-2").innerHTML=player2.name;
-    document.getElementById("roll-button").style.visibility="visible";
-    document.getElementById("hold-button").style.visibility="visible";
-    document.getElementById("score-1").innerHTML=0;
-    document.getElementById("score-2").innerHTML=0;
-    document.getElementById("current-1").innerHTML=0;
-    document.getElementById("current-2").innerHTML=0;
-    player1.scoreTotal=0;
-    player2.scoreTotal=0;
-    currScore=0;
-    currPlayer=1;
+    if(player1.name!=null&&player2.name!=null)
+    {
+        document.getElementById("name-1").innerHTML=player1.name;
+        document.getElementById("name-2").innerHTML=player2.name;
+        document.getElementById("roll-button").style.visibility="visible";
+        document.getElementById("hold-button").style.visibility="visible";
+        document.getElementById("score-1").innerHTML=0;
+        document.getElementById("score-2").innerHTML=0;
+        document.getElementById("current-1").innerHTML=0;
+        document.getElementById("current-2").innerHTML=0;
+        player1.scoreTotal=0;
+        player2.scoreTotal=0;
+        currScore=0;
+        currPlayer=1;
+    }
 }
 function switchTurn(){
     switch(currPlayer){
